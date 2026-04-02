@@ -1,5 +1,5 @@
 
-
+//Required imports for both servlet and JDBC
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -52,7 +52,7 @@ public class Register extends HttpServlet {
 			
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 	    finally {
@@ -60,7 +60,6 @@ public class Register extends HttpServlet {
 				con.close();
 				st.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 	    	
